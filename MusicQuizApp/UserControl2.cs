@@ -21,5 +21,10 @@ namespace MusicQuizApp
         {
 
         }
+
+        private void UserControl2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

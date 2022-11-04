@@ -49,6 +49,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl2";
             this.Size = new System.Drawing.Size(1044, 649);
+            this.Load += new System.EventHandler(this.UserControl2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

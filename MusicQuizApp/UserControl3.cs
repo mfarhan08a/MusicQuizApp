@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,9 @@ namespace MusicQuizApp
         {
             var response = await RestHelper.GetAll();
             richTextBox1.Text = RestHelper.BeautifyJson(response);
+
+            SearchResult res = JsonConvert.DeserializeObject<SearchResult>(response);
+            label2.Text = res.results[0].artistName;
         }
     }
 }

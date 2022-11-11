@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.userControl11 = new MusicQuizApp.UserControl1();
-            this.userControl21 = new MusicQuizApp.UserControl2();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.userControl31 = new MusicQuizApp.UserControl3();
+            this.userControl21 = new MusicQuizApp.UserControl2();
+            this.userControl11 = new MusicQuizApp.UserControl1();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,15 +49,15 @@
             this.panel1.Size = new System.Drawing.Size(200, 673);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // button3
             // 
-            this.button1.Location = new System.Drawing.Point(3, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 67);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Location = new System.Drawing.Point(3, 158);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(194, 67);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -69,29 +69,15 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(3, 158);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 67);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // userControl11
-            // 
-            this.userControl11.Location = new System.Drawing.Point(206, 12);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1044, 649);
-            this.userControl11.TabIndex = 1;
-            // 
-            // userControl21
-            // 
-            this.userControl21.Location = new System.Drawing.Point(206, 12);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(1044, 649);
-            this.userControl21.TabIndex = 2;
+            this.button1.Location = new System.Drawing.Point(3, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 67);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // userControl31
             // 
@@ -100,6 +86,20 @@
             this.userControl31.Size = new System.Drawing.Size(1044, 649);
             this.userControl31.TabIndex = 3;
             this.userControl31.Load += new System.EventHandler(this.userControl31_Load);
+            // 
+            // userControl21
+            // 
+            this.userControl21.Location = new System.Drawing.Point(206, 12);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(1044, 649);
+            this.userControl21.TabIndex = 2;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(206, 12);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1044, 649);
+            this.userControl11.TabIndex = 1;
             // 
             // Form1
             // 

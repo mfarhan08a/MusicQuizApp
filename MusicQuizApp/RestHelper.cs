@@ -11,12 +11,12 @@ namespace MusicQuizApp
 {
     public static class RestHelper
     {
-        private static readonly string baseURL = "https://reqres.in/api/";
+        private static readonly string baseURL = "https://itunes.apple.com/search?";
         public static async Task<string> GetAll()
         {
             using (HttpClient client = new HttpClient())
             {
-                using (HttpResponseMessage response = await client.GetAsync(baseURL + "users"))
+                using (HttpResponseMessage response = await client.GetAsync(baseURL + "term=taylor+swift"))
                 {
                     using (HttpContent content = response.Content)
                     {

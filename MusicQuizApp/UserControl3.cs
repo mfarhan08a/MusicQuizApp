@@ -31,13 +31,18 @@ namespace MusicQuizApp
             richTextBox1.Text = RestHelper.BeautifyJson(response);
 
             res = JsonConvert.DeserializeObject<SearchResult>(response);
-            label2.Text = res.results[0].artistName;            
+            //label2.Text = res.results[0].artistName;            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {                
-            player.URL = res.results[0].previewUrl;
+            player.URL = res.results[5].previewUrl;
             player.controls.play();
-        }       
+        }
+
+        private void UserControl3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

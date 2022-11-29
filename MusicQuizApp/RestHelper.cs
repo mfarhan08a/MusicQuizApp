@@ -15,8 +15,10 @@ namespace MusicQuizApp
         public static async Task<string> GetAll()
         {
             using (HttpClient client = new HttpClient())
-            {
-                using (HttpResponseMessage response = await client.GetAsync(baseURL + "term=taylor+swift"))
+            {                
+                using (HttpResponseMessage response = await client.GetAsync(baseURL + "term=taylor+swift&entity=musicTrack"))
+                //using (HttpResponseMessage response = await client.GetAsync(baseURL + "media=music"))
+                //using (HttpResponseMessage response = await client.GetAsync("https://itunes.apple.com/search?term=YOASOBI&country=jp&entity=musicTrack"))
                 {
                     using (HttpContent content = response.Content)
                     {

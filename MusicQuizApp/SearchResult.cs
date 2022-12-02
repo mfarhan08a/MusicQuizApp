@@ -57,6 +57,60 @@ namespace MusicQuizApp
             public bool hasITunesExtras { get; set; }
         }
 
+        /*public class ResultDistinct : IEqualityComparer<Result>
+        {
+            public bool Equals(Result x, Result y)
+            {
+                return x.trackId == y.trackId;
+            }
+
+            public int GetHashCode(Result obj)
+            {
+                return obj.wrapperType.GetHashCode() ^
+                    obj.kind.GetHashCode() ^
+                    obj.artistId.GetHashCode() ^
+                    obj.collectionId.GetHashCode() ^
+                    obj.trackId.GetHashCode() ^
+                    obj.artistName.GetHashCode() ^
+                    obj.collectionName.GetHashCode() ^
+                    obj.trackName.GetHashCode() ^
+                    obj.collectionCensoredName.GetHashCode() ^
+                    obj.trackCensoredName.GetHashCode() ^
+                    obj.artistViewUrl.GetHashCode() ^
+                    obj.collectionViewUrl.GetHashCode() ^
+                    obj.trackViewUrl.GetHashCode() ^
+                    obj.previewUrl.GetHashCode() ^
+                    obj.artworkUrl30.GetHashCode() ^
+                    obj.artworkUrl60.GetHashCode() ^
+                    obj.artworkUrl100.GetHashCode() ^
+                    obj.collectionPrice.GetHashCode() ^
+                    obj.trackPrice.GetHashCode() ^
+                    obj.releaseDate.GetHashCode() ^
+                    obj.collectionExplicitness.GetHashCode() ^
+                    obj.trackExplicitness.GetHashCode() ^
+                    obj.discCount.GetHashCode() ^
+                    obj.discNumber.GetHashCode() ^
+                    obj.trackCount.GetHashCode() ^
+                    obj.trackNumber.GetHashCode() ^
+                    obj.trackTimeMillis.GetHashCode() ^
+                    obj.country.GetHashCode() ^
+                    obj.currency.GetHashCode() ^
+                    obj.primaryGenreName.GetHashCode() ^
+                    obj.isStreamable.GetHashCode() ^
+                    obj.contentAdvisoryRating.GetHashCode() ^
+                    obj.copyright.GetHashCode() ^
+                    obj.description.GetHashCode() ^
+                    obj.collectionArtistId.GetHashCode() ^
+                    obj.collectionArtistViewUrl.GetHashCode() ^
+                    obj.trackRentalPrice.GetHashCode() ^
+                    obj.collectionHdPrice.GetHashCode() ^
+                    obj.trackHdPrice.GetHashCode() ^
+                    obj.trackHdRentalPrice.GetHashCode() ^
+                    obj.longDescription.GetHashCode() ^
+                    obj.hasITunesExtras.GetHashCode();
+            }
+        }*/
+
 
 
     }

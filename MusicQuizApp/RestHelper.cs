@@ -12,11 +12,11 @@ namespace MusicQuizApp
     public static class RestHelper
     {
         private static readonly string baseURL = "https://itunes.apple.com/search?";
-        public static async Task<string> GetAll()
+        public static async Task<string> GetAll(String music)
         {
             using (HttpClient client = new HttpClient())
             {                
-                using (HttpResponseMessage response = await client.GetAsync(baseURL + "term=taylor+swift&entity=musicTrack"))
+                using (HttpResponseMessage response = await client.GetAsync(baseURL + $"term={music}&entity=musicTrack&limit=200"))
                 //using (HttpResponseMessage response = await client.GetAsync(baseURL + "media=music"))
                 //using (HttpResponseMessage response = await client.GetAsync("https://itunes.apple.com/search?term=YOASOBI&country=jp&entity=musicTrack"))
                 {

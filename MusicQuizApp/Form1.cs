@@ -19,10 +19,10 @@ namespace MusicQuizApp
         SearchResult res = new SearchResult();
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         List<int> randomTrack = new List<int>();
+        List<SearchResult.Result> songs = new List<SearchResult.Result>();       
         int questionNumber = 0;
         int score = 0;
         int totalQuestion = 10;
-
 
 
         public Form1()
@@ -35,15 +35,23 @@ namespace MusicQuizApp
             pnl_welcome.Visible = true;
             pnl_play.Visible = false;
             pnl_settings.Visible = false;
-            //pnl_welcome.BringToFront();
-
-            var response = await RestHelper.GetAll();
+            pnl_welcome.BringToFront();
+            // pop
+            var response = await RestHelper.GetAll("country");
             res = JsonConvert.DeserializeObject<SearchResult>(response);
+            songs.AddRange(res.results);
+
+            var response2 = await RestHelper.GetAll("pop");
+            res = JsonConvert.DeserializeObject<SearchResult>(response2);
+            songs.AddRange(res.results);            
+
+            songs = songs.GroupBy(s => s.trackId).Select(s => s.First()).ToList();
+
 
             guessBox.KeyDown += new KeyEventHandler(tb_KeyDown);
-        }
+        }        
 
-        private async void btn_play_Click(object sender, EventArgs e)
+        private void btn_play_Click(object sender, EventArgs e)
         {
             pnl_welcome.Visible = false;
             pnl_play.Visible = true;
@@ -51,16 +59,16 @@ namespace MusicQuizApp
             pnl_play.BringToFront();
 
             btn_skip.Visible = true;
-                       
+
             score = 0;
             questionNumber = 0;
             randomTrack.Clear();
 
-            Random rnd = new Random();           
+            Random rnd = new Random();
             int MyNumber = 0;
             void NewNumber()
             {
-                MyNumber = rnd.Next(0, 50);
+                MyNumber = rnd.Next(0, songs.Count - 1);
                 if (!randomTrack.Contains(MyNumber))
                 {
                     Console.WriteLine(MyNumber);
@@ -70,7 +78,7 @@ namespace MusicQuizApp
 
             for (int i = 0; i < totalQuestion + 5; i++)
             {
-                NewNumber();               
+                NewNumber();
             }
 
             play(questionNumber);
@@ -78,7 +86,7 @@ namespace MusicQuizApp
         public void play(int questionNumber)
         {
             //Console.WriteLine(questionNumber);
-            player.URL = res.results[randomTrack[questionNumber]].previewUrl;
+            player.URL = songs[randomTrack[questionNumber]].previewUrl;
             player.controls.play();
         }
 
@@ -103,12 +111,13 @@ namespace MusicQuizApp
             }
             else
             {
-                Console.WriteLine(res.results[randomTrack[questionNumber]].trackName);
-                if (guessBox.Text.Trim().ToLower() == res.results[randomTrack[questionNumber]].trackName.Trim().ToLower())
+                Console.WriteLine(songs[randomTrack[questionNumber]].trackName);
+                if (guessBox.Text.Trim().ToLower() == songs[randomTrack[questionNumber]].trackName.Trim().ToLower())
                 {
                     score++;
                     label5.Text = "benar";
                     questionNumber++;
+                    guessBox.Text = "";
                     if (questionNumber == totalQuestion)
                     {
                         goto SkipToEnd;
@@ -133,6 +142,7 @@ namespace MusicQuizApp
         {
             questionNumber++;
             Console.WriteLine(questionNumber);
+            guessBox.Text = "";
             if (questionNumber == totalQuestion)
             {
                 checkAnswer();
@@ -162,8 +172,11 @@ namespace MusicQuizApp
             pnl_settings.Visible = true;
             pnl_settings.BringToFront();
 
-            dataSongsView.DataSource = res.results;
+            dataSongsView.DataSource = songs;
             player.controls.stop();
+
+            Console.WriteLine(songs.Count());           
+            
         }
 
 

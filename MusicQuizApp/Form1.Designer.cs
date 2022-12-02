@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_play = new System.Windows.Forms.Panel();
+            this.btn_skip = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_answer = new System.Windows.Forms.Button();
             this.guessBox = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_settings = new System.Windows.Forms.Panel();
             this.dataSongsView = new System.Windows.Forms.DataGridView();
-            this.btn_skip = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnl_welcome.SuspendLayout();
             this.pnl_play.SuspendLayout();
@@ -61,17 +61,17 @@
             this.panel1.Controls.Add(this.btn_play);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 681);
+            this.panel1.Size = new System.Drawing.Size(237, 838);
             this.panel1.TabIndex = 0;
             // 
             // btn_welcome
             // 
-            this.btn_welcome.Location = new System.Drawing.Point(20, 161);
-            this.btn_welcome.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_welcome.Location = new System.Drawing.Point(27, 198);
+            this.btn_welcome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_welcome.Name = "btn_welcome";
-            this.btn_welcome.Size = new System.Drawing.Size(146, 42);
+            this.btn_welcome.Size = new System.Drawing.Size(195, 52);
             this.btn_welcome.TabIndex = 4;
             this.btn_welcome.Text = "Welcome";
             this.btn_welcome.UseVisualStyleBackColor = true;
@@ -79,10 +79,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(20, 320);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(27, 394);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 42);
+            this.button3.Size = new System.Drawing.Size(195, 52);
             this.button3.TabIndex = 3;
             this.button3.Text = "About";
             this.button3.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             // 
             // btn_settings
             // 
-            this.btn_settings.Location = new System.Drawing.Point(20, 267);
-            this.btn_settings.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_settings.Location = new System.Drawing.Point(27, 329);
+            this.btn_settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(146, 42);
+            this.btn_settings.Size = new System.Drawing.Size(195, 52);
             this.btn_settings.TabIndex = 2;
             this.btn_settings.Text = "Settings";
             this.btn_settings.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
             // btn_play
             // 
             this.btn_play.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_play.Location = new System.Drawing.Point(20, 214);
-            this.btn_play.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_play.Location = new System.Drawing.Point(27, 263);
+            this.btn_play.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_play.Name = "btn_play";
-            this.btn_play.Size = new System.Drawing.Size(146, 42);
+            this.btn_play.Size = new System.Drawing.Size(195, 52);
             this.btn_play.TabIndex = 1;
             this.btn_play.Text = "Play";
             this.btn_play.UseVisualStyleBackColor = false;
@@ -115,18 +115,20 @@
             // 
             this.pnl_welcome.Controls.Add(this.label2);
             this.pnl_welcome.Controls.Add(this.label1);
-            this.pnl_welcome.Location = new System.Drawing.Point(389, 113);
+            this.pnl_welcome.Location = new System.Drawing.Point(519, 139);
+            this.pnl_welcome.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_welcome.Name = "pnl_welcome";
-            this.pnl_welcome.Size = new System.Drawing.Size(863, 556);
+            this.pnl_welcome.Size = new System.Drawing.Size(1151, 684);
             this.pnl_welcome.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(332, 293);
+            this.label2.Location = new System.Drawing.Point(443, 361);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 25);
+            this.label2.Size = new System.Drawing.Size(305, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Click play button to start";
             // 
@@ -134,9 +136,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 223);
+            this.label1.Location = new System.Drawing.Point(229, 274);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(563, 55);
+            this.label1.Size = new System.Drawing.Size(697, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome To Music Quiz";
             // 
@@ -148,17 +151,30 @@
             this.pnl_play.Controls.Add(this.guessBox);
             this.pnl_play.Controls.Add(this.label4);
             this.pnl_play.Controls.Add(this.label3);
-            this.pnl_play.Location = new System.Drawing.Point(363, 84);
+            this.pnl_play.Location = new System.Drawing.Point(484, 103);
+            this.pnl_play.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_play.Name = "pnl_play";
-            this.pnl_play.Size = new System.Drawing.Size(873, 569);
+            this.pnl_play.Size = new System.Drawing.Size(1164, 700);
             this.pnl_play.TabIndex = 3;
+            // 
+            // btn_skip
+            // 
+            this.btn_skip.Location = new System.Drawing.Point(973, 641);
+            this.btn_skip.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_skip.Name = "btn_skip";
+            this.btn_skip.Size = new System.Drawing.Size(161, 36);
+            this.btn_skip.TabIndex = 13;
+            this.btn_skip.Text = "Skip";
+            this.btn_skip.UseVisualStyleBackColor = true;
+            this.btn_skip.Click += new System.EventHandler(this.btn_skip_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(727, 357);
+            this.label5.Location = new System.Drawing.Point(969, 439);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "label5";
             // 
@@ -167,9 +183,10 @@
             this.btn_answer.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btn_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_answer.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_answer.Location = new System.Drawing.Point(359, 449);
+            this.btn_answer.Location = new System.Drawing.Point(479, 553);
+            this.btn_answer.Margin = new System.Windows.Forms.Padding(4);
             this.btn_answer.Name = "btn_answer";
-            this.btn_answer.Size = new System.Drawing.Size(146, 45);
+            this.btn_answer.Size = new System.Drawing.Size(195, 55);
             this.btn_answer.TabIndex = 11;
             this.btn_answer.Text = "Enter";
             this.btn_answer.UseVisualStyleBackColor = false;
@@ -178,9 +195,10 @@
             // guessBox
             // 
             this.guessBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guessBox.Location = new System.Drawing.Point(184, 399);
+            this.guessBox.Location = new System.Drawing.Point(245, 491);
+            this.guessBox.Margin = new System.Windows.Forms.Padding(4);
             this.guessBox.Name = "guessBox";
-            this.guessBox.Size = new System.Drawing.Size(496, 44);
+            this.guessBox.Size = new System.Drawing.Size(660, 53);
             this.guessBox.TabIndex = 10;
             this.guessBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -188,9 +206,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(364, 357);
+            this.label4.Location = new System.Drawing.Point(485, 439);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 25);
+            this.label4.Size = new System.Drawing.Size(167, 31);
             this.label4.TabIndex = 9;
             this.label4.Text = "Your Guess";
             // 
@@ -198,18 +217,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(375, 23);
+            this.label3.Location = new System.Drawing.Point(500, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 37);
+            this.label3.Size = new System.Drawing.Size(126, 46);
             this.label3.TabIndex = 8;
             this.label3.Text = "Timer";
             // 
             // pnl_settings
             // 
             this.pnl_settings.Controls.Add(this.dataSongsView);
-            this.pnl_settings.Location = new System.Drawing.Point(183, 12);
+            this.pnl_settings.Location = new System.Drawing.Point(244, 15);
+            this.pnl_settings.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_settings.Name = "pnl_settings";
-            this.pnl_settings.Size = new System.Drawing.Size(1039, 622);
+            this.pnl_settings.Size = new System.Drawing.Size(1385, 766);
             this.pnl_settings.TabIndex = 4;
             // 
             // dataSongsView
@@ -217,32 +238,24 @@
             this.dataSongsView.AllowUserToAddRows = false;
             this.dataSongsView.AllowUserToDeleteRows = false;
             this.dataSongsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSongsView.Location = new System.Drawing.Point(4, 4);
+            this.dataSongsView.Location = new System.Drawing.Point(5, 5);
+            this.dataSongsView.Margin = new System.Windows.Forms.Padding(4);
             this.dataSongsView.Name = "dataSongsView";
             this.dataSongsView.ReadOnly = true;
-            this.dataSongsView.Size = new System.Drawing.Size(1032, 562);
+            this.dataSongsView.RowHeadersWidth = 51;
+            this.dataSongsView.Size = new System.Drawing.Size(1376, 692);
             this.dataSongsView.TabIndex = 0;
-            // 
-            // btn_skip
-            // 
-            this.btn_skip.Location = new System.Drawing.Point(730, 521);
-            this.btn_skip.Name = "btn_skip";
-            this.btn_skip.Size = new System.Drawing.Size(121, 29);
-            this.btn_skip.TabIndex = 13;
-            this.btn_skip.Text = "Skip";
-            this.btn_skip.UseVisualStyleBackColor = true;
-            this.btn_skip.Click += new System.EventHandler(this.btn_skip_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.pnl_play);
             this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_welcome);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

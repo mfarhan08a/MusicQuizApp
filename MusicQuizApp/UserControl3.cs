@@ -27,7 +27,7 @@ namespace MusicQuizApp
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            var response = await RestHelper.GetAll();
+            var response = await RestHelper.GetAll("j");
             richTextBox1.Text = RestHelper.BeautifyJson(response);
 
             res = JsonConvert.DeserializeObject<SearchResult>(response);

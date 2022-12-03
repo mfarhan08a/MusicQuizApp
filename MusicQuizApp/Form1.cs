@@ -19,7 +19,8 @@ namespace MusicQuizApp
         SearchResult res = new SearchResult();
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         List<int> randomTrack = new List<int>();
-        List<SearchResult.Result> songs = new List<SearchResult.Result>();       
+        List<SearchResult.Result> songs = new List<SearchResult.Result>();
+        string[] genre = { "pop", "country", "rock", "dance", "j-pop", "k-pop", "soundtrack" };
         int questionNumber = 0;
         int score = 0;
         int totalQuestion = 10;
@@ -30,29 +31,33 @@ namespace MusicQuizApp
             InitializeComponent();
         }
 
-        private async void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
+            // panel controls
             pnl_welcome.Visible = true;
             pnl_play.Visible = false;
             pnl_settings.Visible = false;
             pnl_welcome.BringToFront();
-            // pop
-            var response = await RestHelper.GetAll("country");
-            res = JsonConvert.DeserializeObject<SearchResult>(response);
-            songs.AddRange(res.results);
-
-            var response2 = await RestHelper.GetAll("pop");
-            res = JsonConvert.DeserializeObject<SearchResult>(response2);
-            songs.AddRange(res.results);            
-
-            songs = songs.GroupBy(s => s.trackId).Select(s => s.First()).ToList();
-
+            
+            syncSongs(genre);
 
             guessBox.KeyDown += new KeyEventHandler(tb_KeyDown);
-        }        
+        }
+
+        public async void syncSongs(string[] genres)
+        {
+            foreach(var genre in genres)
+            {
+                var response = await RestHelper.GetAll(genre);
+                var res = JsonConvert.DeserializeObject<SearchResult>(response);
+                songs.AddRange(res.results);
+            }
+            songs = songs.GroupBy(s => s.trackId).Select(s => s.First()).ToList();
+        }
 
         private void btn_play_Click(object sender, EventArgs e)
         {
+            // panel controls
             pnl_welcome.Visible = false;
             pnl_play.Visible = true;
             pnl_settings.Visible = false;
@@ -111,8 +116,15 @@ namespace MusicQuizApp
             }
             else
             {
+                var index = songs[randomTrack[questionNumber]].trackName.IndexOf('(');
                 Console.WriteLine(songs[randomTrack[questionNumber]].trackName);
-                if (guessBox.Text.Trim().ToLower() == songs[randomTrack[questionNumber]].trackName.Trim().ToLower())
+                var answer = songs[randomTrack[questionNumber]].trackName;
+                if (index >= 0)
+                {
+                    Console.WriteLine(songs[randomTrack[questionNumber]].trackName.Remove(index));
+                    answer = songs[randomTrack[questionNumber]].trackName.Remove(index);
+                }
+                if (guessBox.Text.Trim().ToLower() == answer.Trim().ToLower())
                 {
                     score++;
                     label5.Text = "benar";
@@ -158,6 +170,7 @@ namespace MusicQuizApp
 
         private void btn_welcome_Click(object sender, EventArgs e)
         {
+            // panel controls
             pnl_welcome.Visible = true;
             pnl_play.Visible = false;
             pnl_settings.Visible = false;
@@ -167,6 +180,7 @@ namespace MusicQuizApp
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
+            // panel controls
             pnl_welcome.Visible = false;
             pnl_play.Visible = false;
             pnl_settings.Visible = true;
@@ -175,8 +189,8 @@ namespace MusicQuizApp
             dataSongsView.DataSource = songs;
             player.controls.stop();
 
-            Console.WriteLine(songs.Count());           
-            
+            Console.WriteLine(songs.Count());
+
         }
 
 
@@ -198,8 +212,6 @@ namespace MusicQuizApp
         private void button1_Click(object sender, EventArgs e)
         {
 
-        }
-
-
+        }        
     }
 }

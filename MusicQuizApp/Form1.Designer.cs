@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_welcome = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
@@ -70,6 +71,13 @@
             this.rb_timer45 = new System.Windows.Forms.RadioButton();
             this.pnl_about = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.linkLabel_instagram = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_itunes = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnl_welcome.SuspendLayout();
             this.pnl_play.SuspendLayout();
@@ -80,6 +88,7 @@
             this.gb_totalQuestion.SuspendLayout();
             this.gb_countdownTimer.SuspendLayout();
             this.pnl_about.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -172,6 +181,7 @@
             // 
             // pnl_play
             // 
+            this.pnl_play.Controls.Add(this.pictureBox1);
             this.pnl_play.Controls.Add(this.prevSongInfo);
             this.pnl_play.Controls.Add(this.lbl_questionNumber);
             this.pnl_play.Controls.Add(this.lbl_question);
@@ -250,7 +260,7 @@
             // 
             this.lbl_timer.AutoSize = true;
             this.lbl_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_timer.Location = new System.Drawing.Point(361, 77);
+            this.lbl_timer.Location = new System.Drawing.Point(359, 66);
             this.lbl_timer.Name = "lbl_timer";
             this.lbl_timer.Size = new System.Drawing.Size(153, 108);
             this.lbl_timer.TabIndex = 14;
@@ -314,7 +324,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(383, 35);
+            this.label3.Location = new System.Drawing.Point(380, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 37);
             this.label3.TabIndex = 8;
@@ -518,6 +528,12 @@
             // 
             // pnl_about
             // 
+            this.pnl_about.Controls.Add(this.linkLabel_itunes);
+            this.pnl_about.Controls.Add(this.linkLabel_instagram);
+            this.pnl_about.Controls.Add(this.label7);
+            this.pnl_about.Controls.Add(this.label9);
+            this.pnl_about.Controls.Add(this.label8);
+            this.pnl_about.Controls.Add(this.label6);
             this.pnl_about.Controls.Add(this.label5);
             this.pnl_about.Location = new System.Drawing.Point(229, 12);
             this.pnl_about.Name = "pnl_about";
@@ -534,16 +550,90 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "About";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(51, 166);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Muhammad Farhan Anshor";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(50, 137);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 25);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Created by";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(50, 232);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 25);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Build with";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(51, 261);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(236, 20);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Windows Form .NET Framework";
+            // 
+            // linkLabel_instagram
+            // 
+            this.linkLabel_instagram.AutoSize = true;
+            this.linkLabel_instagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_instagram.Location = new System.Drawing.Point(51, 188);
+            this.linkLabel_instagram.Name = "linkLabel_instagram";
+            this.linkLabel_instagram.Size = new System.Drawing.Size(95, 20);
+            this.linkLabel_instagram.TabIndex = 6;
+            this.linkLabel_instagram.TabStop = true;
+            this.linkLabel_instagram.Text = "mfarhan08a";
+            this.linkLabel_instagram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_instagram_LinkClicked);
+            // 
+            // linkLabel_itunes
+            // 
+            this.linkLabel_itunes.AutoSize = true;
+            this.linkLabel_itunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_itunes.Location = new System.Drawing.Point(51, 284);
+            this.linkLabel_itunes.Name = "linkLabel_itunes";
+            this.linkLabel_itunes.Size = new System.Drawing.Size(141, 20);
+            this.linkLabel_itunes.TabIndex = 7;
+            this.linkLabel_itunes.TabStop = true;
+            this.linkLabel_itunes.Text = "iTunes Search API";
+            this.linkLabel_itunes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_itunes_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(314, 191);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.pnl_about);
             this.Controls.Add(this.pnl_play);
             this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_welcome);
+            this.Controls.Add(this.pnl_about);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -565,6 +655,7 @@
             this.gb_countdownTimer.PerformLayout();
             this.pnl_about.ResumeLayout(false);
             this.pnl_about.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -612,6 +703,13 @@
         private System.Windows.Forms.RadioButton rb_timer45;
         private System.Windows.Forms.Panel pnl_about;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel linkLabel_instagram;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel_itunes;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

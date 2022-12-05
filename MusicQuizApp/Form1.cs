@@ -332,6 +332,18 @@ namespace MusicQuizApp
         private void btn_about_Click(object sender, EventArgs e)
         {
             panelControls(pnl_about);
+        }       
+
+        private void linkLabel_instagram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel_instagram.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.instagram.com/mfarhan08a");
+        }
+
+        private void linkLabel_itunes_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel_instagram.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://performance-partners.apple.com/search-api");
         }
     }
 }

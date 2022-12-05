@@ -39,56 +39,56 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_play = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.prevSongInfo = new System.Windows.Forms.GroupBox();
             this.lbl_year = new System.Windows.Forms.Label();
             this.lbl_artist = new System.Windows.Forms.Label();
             this.lbl_title = new System.Windows.Forms.Label();
             this.lbl_questionNumber = new System.Windows.Forms.Label();
             this.lbl_question = new System.Windows.Forms.Label();
+            this.lbl_guess = new System.Windows.Forms.Label();
             this.lbl_timer = new System.Windows.Forms.Label();
             this.btn_skip = new System.Windows.Forms.Button();
-            this.lbl_guess = new System.Windows.Forms.Label();
             this.btn_answer = new System.Windows.Forms.Button();
             this.guessBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_settings = new System.Windows.Forms.Panel();
+            this.gb_countdownTimer = new System.Windows.Forms.GroupBox();
+            this.rb_timer15 = new System.Windows.Forms.RadioButton();
+            this.rb_timer25 = new System.Windows.Forms.RadioButton();
+            this.rb_timer45 = new System.Windows.Forms.RadioButton();
+            this.gb_totalQuestion = new System.Windows.Forms.GroupBox();
+            this.rb_totalquestion100 = new System.Windows.Forms.RadioButton();
+            this.rb_totalquestion80 = new System.Windows.Forms.RadioButton();
+            this.rb_totalquestion50 = new System.Windows.Forms.RadioButton();
+            this.rb_totalquestion20 = new System.Windows.Forms.RadioButton();
+            this.rb_totalquestion10 = new System.Windows.Forms.RadioButton();
             this.btn_applySettings = new System.Windows.Forms.Button();
             this.gb_genreSelection = new System.Windows.Forms.GroupBox();
             this.clb_genreSelection = new System.Windows.Forms.CheckedListBox();
             this.lbl_settings = new System.Windows.Forms.Label();
             this.dataSongsView = new System.Windows.Forms.DataGridView();
             this.countdown = new System.Windows.Forms.Timer(this.components);
-            this.gb_totalQuestion = new System.Windows.Forms.GroupBox();
-            this.rb_totalquestion10 = new System.Windows.Forms.RadioButton();
-            this.rb_totalquestion20 = new System.Windows.Forms.RadioButton();
-            this.rb_totalquestion50 = new System.Windows.Forms.RadioButton();
-            this.rb_totalquestion80 = new System.Windows.Forms.RadioButton();
-            this.rb_totalquestion100 = new System.Windows.Forms.RadioButton();
-            this.gb_countdownTimer = new System.Windows.Forms.GroupBox();
-            this.rb_timer15 = new System.Windows.Forms.RadioButton();
-            this.rb_timer25 = new System.Windows.Forms.RadioButton();
-            this.rb_timer45 = new System.Windows.Forms.RadioButton();
             this.pnl_about = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.linkLabel_itunes = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_instagram = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.linkLabel_instagram = new System.Windows.Forms.LinkLabel();
-            this.linkLabel_itunes = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnl_welcome.SuspendLayout();
             this.pnl_play.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.prevSongInfo.SuspendLayout();
             this.pnl_settings.SuspendLayout();
+            this.gb_countdownTimer.SuspendLayout();
+            this.gb_totalQuestion.SuspendLayout();
             this.gb_genreSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSongsView)).BeginInit();
-            this.gb_totalQuestion.SuspendLayout();
-            this.gb_countdownTimer.SuspendLayout();
             this.pnl_about.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -197,6 +197,16 @@
             this.pnl_play.Size = new System.Drawing.Size(873, 569);
             this.pnl_play.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(314, 191);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // prevSongInfo
             // 
             this.prevSongInfo.Controls.Add(this.lbl_year);
@@ -256,9 +266,19 @@
             this.lbl_question.TabIndex = 15;
             this.lbl_question.Text = "Question :";
             // 
+            // lbl_guess
+            // 
+            this.lbl_guess.AutoSize = true;
+            this.lbl_guess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_guess.Location = new System.Drawing.Point(128, 478);
+            this.lbl_guess.Name = "lbl_guess";
+            this.lbl_guess.Size = new System.Drawing.Size(86, 16);
+            this.lbl_guess.TabIndex = 12;
+            this.lbl_guess.Text = "Your Guess : ";
+            this.lbl_guess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbl_timer
             // 
-            this.lbl_timer.AutoSize = true;
             this.lbl_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_timer.Location = new System.Drawing.Point(359, 66);
             this.lbl_timer.Name = "lbl_timer";
@@ -276,17 +296,6 @@
             this.btn_skip.Text = "Skip";
             this.btn_skip.UseVisualStyleBackColor = true;
             this.btn_skip.Click += new System.EventHandler(this.btn_skip_Click);
-            // 
-            // lbl_guess
-            // 
-            this.lbl_guess.AutoSize = true;
-            this.lbl_guess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_guess.Location = new System.Drawing.Point(128, 478);
-            this.lbl_guess.Name = "lbl_guess";
-            this.lbl_guess.Size = new System.Drawing.Size(86, 16);
-            this.lbl_guess.TabIndex = 12;
-            this.lbl_guess.Text = "Your Guess : ";
-            this.lbl_guess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_answer
             // 
@@ -342,6 +351,122 @@
             this.pnl_settings.Name = "pnl_settings";
             this.pnl_settings.Size = new System.Drawing.Size(1039, 622);
             this.pnl_settings.TabIndex = 4;
+            // 
+            // gb_countdownTimer
+            // 
+            this.gb_countdownTimer.Controls.Add(this.rb_timer15);
+            this.gb_countdownTimer.Controls.Add(this.rb_timer25);
+            this.gb_countdownTimer.Controls.Add(this.rb_timer45);
+            this.gb_countdownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_countdownTimer.Location = new System.Drawing.Point(14, 438);
+            this.gb_countdownTimer.Name = "gb_countdownTimer";
+            this.gb_countdownTimer.Size = new System.Drawing.Size(423, 77);
+            this.gb_countdownTimer.TabIndex = 5;
+            this.gb_countdownTimer.TabStop = false;
+            this.gb_countdownTimer.Text = "Countdown Timer";
+            // 
+            // rb_timer15
+            // 
+            this.rb_timer15.AutoSize = true;
+            this.rb_timer15.Location = new System.Drawing.Point(286, 35);
+            this.rb_timer15.Name = "rb_timer15";
+            this.rb_timer15.Size = new System.Drawing.Size(109, 24);
+            this.rb_timer15.TabIndex = 2;
+            this.rb_timer15.TabStop = true;
+            this.rb_timer15.Text = "15 seconds";
+            this.rb_timer15.UseVisualStyleBackColor = true;
+            // 
+            // rb_timer25
+            // 
+            this.rb_timer25.AutoSize = true;
+            this.rb_timer25.Location = new System.Drawing.Point(146, 35);
+            this.rb_timer25.Name = "rb_timer25";
+            this.rb_timer25.Size = new System.Drawing.Size(109, 24);
+            this.rb_timer25.TabIndex = 1;
+            this.rb_timer25.TabStop = true;
+            this.rb_timer25.Text = "25 seconds";
+            this.rb_timer25.UseVisualStyleBackColor = true;
+            // 
+            // rb_timer45
+            // 
+            this.rb_timer45.AutoSize = true;
+            this.rb_timer45.Location = new System.Drawing.Point(12, 35);
+            this.rb_timer45.Name = "rb_timer45";
+            this.rb_timer45.Size = new System.Drawing.Size(109, 24);
+            this.rb_timer45.TabIndex = 0;
+            this.rb_timer45.TabStop = true;
+            this.rb_timer45.Text = "45 seconds";
+            this.rb_timer45.UseVisualStyleBackColor = true;
+            // 
+            // gb_totalQuestion
+            // 
+            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion100);
+            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion80);
+            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion50);
+            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion20);
+            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion10);
+            this.gb_totalQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_totalQuestion.Location = new System.Drawing.Point(14, 342);
+            this.gb_totalQuestion.Name = "gb_totalQuestion";
+            this.gb_totalQuestion.Size = new System.Drawing.Size(423, 77);
+            this.gb_totalQuestion.TabIndex = 3;
+            this.gb_totalQuestion.TabStop = false;
+            this.gb_totalQuestion.Text = "Total Question";
+            // 
+            // rb_totalquestion100
+            // 
+            this.rb_totalquestion100.AutoSize = true;
+            this.rb_totalquestion100.Location = new System.Drawing.Point(350, 35);
+            this.rb_totalquestion100.Name = "rb_totalquestion100";
+            this.rb_totalquestion100.Size = new System.Drawing.Size(54, 24);
+            this.rb_totalquestion100.TabIndex = 4;
+            this.rb_totalquestion100.TabStop = true;
+            this.rb_totalquestion100.Text = "100";
+            this.rb_totalquestion100.UseVisualStyleBackColor = true;
+            // 
+            // rb_totalquestion80
+            // 
+            this.rb_totalquestion80.AutoSize = true;
+            this.rb_totalquestion80.Location = new System.Drawing.Point(257, 35);
+            this.rb_totalquestion80.Name = "rb_totalquestion80";
+            this.rb_totalquestion80.Size = new System.Drawing.Size(45, 24);
+            this.rb_totalquestion80.TabIndex = 3;
+            this.rb_totalquestion80.TabStop = true;
+            this.rb_totalquestion80.Text = "80";
+            this.rb_totalquestion80.UseVisualStyleBackColor = true;
+            // 
+            // rb_totalquestion50
+            // 
+            this.rb_totalquestion50.AutoSize = true;
+            this.rb_totalquestion50.Location = new System.Drawing.Point(169, 35);
+            this.rb_totalquestion50.Name = "rb_totalquestion50";
+            this.rb_totalquestion50.Size = new System.Drawing.Size(45, 24);
+            this.rb_totalquestion50.TabIndex = 2;
+            this.rb_totalquestion50.TabStop = true;
+            this.rb_totalquestion50.Text = "50";
+            this.rb_totalquestion50.UseVisualStyleBackColor = true;
+            // 
+            // rb_totalquestion20
+            // 
+            this.rb_totalquestion20.AutoSize = true;
+            this.rb_totalquestion20.Location = new System.Drawing.Point(87, 35);
+            this.rb_totalquestion20.Name = "rb_totalquestion20";
+            this.rb_totalquestion20.Size = new System.Drawing.Size(45, 24);
+            this.rb_totalquestion20.TabIndex = 1;
+            this.rb_totalquestion20.TabStop = true;
+            this.rb_totalquestion20.Text = "20";
+            this.rb_totalquestion20.UseVisualStyleBackColor = true;
+            // 
+            // rb_totalquestion10
+            // 
+            this.rb_totalquestion10.AutoSize = true;
+            this.rb_totalquestion10.Location = new System.Drawing.Point(12, 35);
+            this.rb_totalquestion10.Name = "rb_totalquestion10";
+            this.rb_totalquestion10.Size = new System.Drawing.Size(45, 24);
+            this.rb_totalquestion10.TabIndex = 0;
+            this.rb_totalquestion10.TabStop = true;
+            this.rb_totalquestion10.Text = "10";
+            this.rb_totalquestion10.UseVisualStyleBackColor = true;
             // 
             // btn_applySettings
             // 
@@ -410,122 +535,6 @@
             this.countdown.Interval = 1000;
             this.countdown.Tick += new System.EventHandler(this.countdown_Tick);
             // 
-            // gb_totalQuestion
-            // 
-            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion100);
-            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion80);
-            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion50);
-            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion20);
-            this.gb_totalQuestion.Controls.Add(this.rb_totalquestion10);
-            this.gb_totalQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_totalQuestion.Location = new System.Drawing.Point(14, 342);
-            this.gb_totalQuestion.Name = "gb_totalQuestion";
-            this.gb_totalQuestion.Size = new System.Drawing.Size(423, 77);
-            this.gb_totalQuestion.TabIndex = 3;
-            this.gb_totalQuestion.TabStop = false;
-            this.gb_totalQuestion.Text = "Total Question";
-            // 
-            // rb_totalquestion10
-            // 
-            this.rb_totalquestion10.AutoSize = true;
-            this.rb_totalquestion10.Location = new System.Drawing.Point(12, 35);
-            this.rb_totalquestion10.Name = "rb_totalquestion10";
-            this.rb_totalquestion10.Size = new System.Drawing.Size(45, 24);
-            this.rb_totalquestion10.TabIndex = 0;
-            this.rb_totalquestion10.TabStop = true;
-            this.rb_totalquestion10.Text = "10";
-            this.rb_totalquestion10.UseVisualStyleBackColor = true;
-            // 
-            // rb_totalquestion20
-            // 
-            this.rb_totalquestion20.AutoSize = true;
-            this.rb_totalquestion20.Location = new System.Drawing.Point(87, 35);
-            this.rb_totalquestion20.Name = "rb_totalquestion20";
-            this.rb_totalquestion20.Size = new System.Drawing.Size(45, 24);
-            this.rb_totalquestion20.TabIndex = 1;
-            this.rb_totalquestion20.TabStop = true;
-            this.rb_totalquestion20.Text = "20";
-            this.rb_totalquestion20.UseVisualStyleBackColor = true;
-            // 
-            // rb_totalquestion50
-            // 
-            this.rb_totalquestion50.AutoSize = true;
-            this.rb_totalquestion50.Location = new System.Drawing.Point(169, 35);
-            this.rb_totalquestion50.Name = "rb_totalquestion50";
-            this.rb_totalquestion50.Size = new System.Drawing.Size(45, 24);
-            this.rb_totalquestion50.TabIndex = 2;
-            this.rb_totalquestion50.TabStop = true;
-            this.rb_totalquestion50.Text = "50";
-            this.rb_totalquestion50.UseVisualStyleBackColor = true;
-            // 
-            // rb_totalquestion80
-            // 
-            this.rb_totalquestion80.AutoSize = true;
-            this.rb_totalquestion80.Location = new System.Drawing.Point(257, 35);
-            this.rb_totalquestion80.Name = "rb_totalquestion80";
-            this.rb_totalquestion80.Size = new System.Drawing.Size(45, 24);
-            this.rb_totalquestion80.TabIndex = 3;
-            this.rb_totalquestion80.TabStop = true;
-            this.rb_totalquestion80.Text = "80";
-            this.rb_totalquestion80.UseVisualStyleBackColor = true;
-            // 
-            // rb_totalquestion100
-            // 
-            this.rb_totalquestion100.AutoSize = true;
-            this.rb_totalquestion100.Location = new System.Drawing.Point(350, 35);
-            this.rb_totalquestion100.Name = "rb_totalquestion100";
-            this.rb_totalquestion100.Size = new System.Drawing.Size(54, 24);
-            this.rb_totalquestion100.TabIndex = 4;
-            this.rb_totalquestion100.TabStop = true;
-            this.rb_totalquestion100.Text = "100";
-            this.rb_totalquestion100.UseVisualStyleBackColor = true;
-            // 
-            // gb_countdownTimer
-            // 
-            this.gb_countdownTimer.Controls.Add(this.rb_timer15);
-            this.gb_countdownTimer.Controls.Add(this.rb_timer25);
-            this.gb_countdownTimer.Controls.Add(this.rb_timer45);
-            this.gb_countdownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_countdownTimer.Location = new System.Drawing.Point(14, 438);
-            this.gb_countdownTimer.Name = "gb_countdownTimer";
-            this.gb_countdownTimer.Size = new System.Drawing.Size(423, 77);
-            this.gb_countdownTimer.TabIndex = 5;
-            this.gb_countdownTimer.TabStop = false;
-            this.gb_countdownTimer.Text = "Countdown Timer";
-            // 
-            // rb_timer15
-            // 
-            this.rb_timer15.AutoSize = true;
-            this.rb_timer15.Location = new System.Drawing.Point(286, 35);
-            this.rb_timer15.Name = "rb_timer15";
-            this.rb_timer15.Size = new System.Drawing.Size(109, 24);
-            this.rb_timer15.TabIndex = 2;
-            this.rb_timer15.TabStop = true;
-            this.rb_timer15.Text = "15 seconds";
-            this.rb_timer15.UseVisualStyleBackColor = true;
-            // 
-            // rb_timer25
-            // 
-            this.rb_timer25.AutoSize = true;
-            this.rb_timer25.Location = new System.Drawing.Point(146, 35);
-            this.rb_timer25.Name = "rb_timer25";
-            this.rb_timer25.Size = new System.Drawing.Size(109, 24);
-            this.rb_timer25.TabIndex = 1;
-            this.rb_timer25.TabStop = true;
-            this.rb_timer25.Text = "25 seconds";
-            this.rb_timer25.UseVisualStyleBackColor = true;
-            // 
-            // rb_timer45
-            // 
-            this.rb_timer45.AutoSize = true;
-            this.rb_timer45.Location = new System.Drawing.Point(12, 35);
-            this.rb_timer45.Name = "rb_timer45";
-            this.rb_timer45.Size = new System.Drawing.Size(109, 24);
-            this.rb_timer45.TabIndex = 0;
-            this.rb_timer45.TabStop = true;
-            this.rb_timer45.Text = "45 seconds";
-            this.rb_timer45.UseVisualStyleBackColor = true;
-            // 
             // pnl_about
             // 
             this.pnl_about.Controls.Add(this.linkLabel_itunes);
@@ -540,35 +549,29 @@
             this.pnl_about.Size = new System.Drawing.Size(960, 1011);
             this.pnl_about.TabIndex = 5;
             // 
-            // label5
+            // linkLabel_itunes
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(45, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 55);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "About";
+            this.linkLabel_itunes.AutoSize = true;
+            this.linkLabel_itunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_itunes.Location = new System.Drawing.Point(51, 284);
+            this.linkLabel_itunes.Name = "linkLabel_itunes";
+            this.linkLabel_itunes.Size = new System.Drawing.Size(141, 20);
+            this.linkLabel_itunes.TabIndex = 7;
+            this.linkLabel_itunes.TabStop = true;
+            this.linkLabel_itunes.Text = "iTunes Search API";
+            this.linkLabel_itunes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_itunes_LinkClicked);
             // 
-            // label6
+            // linkLabel_instagram
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(51, 166);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Muhammad Farhan Anshor";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(50, 137);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 25);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Created by";
+            this.linkLabel_instagram.AutoSize = true;
+            this.linkLabel_instagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_instagram.Location = new System.Drawing.Point(51, 188);
+            this.linkLabel_instagram.Name = "linkLabel_instagram";
+            this.linkLabel_instagram.Size = new System.Drawing.Size(95, 20);
+            this.linkLabel_instagram.TabIndex = 6;
+            this.linkLabel_instagram.TabStop = true;
+            this.linkLabel_instagram.Text = "mfarhan08a";
+            this.linkLabel_instagram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_instagram_LinkClicked);
             // 
             // label7
             // 
@@ -590,39 +593,35 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Windows Form .NET Framework";
             // 
-            // linkLabel_instagram
+            // label8
             // 
-            this.linkLabel_instagram.AutoSize = true;
-            this.linkLabel_instagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel_instagram.Location = new System.Drawing.Point(51, 188);
-            this.linkLabel_instagram.Name = "linkLabel_instagram";
-            this.linkLabel_instagram.Size = new System.Drawing.Size(95, 20);
-            this.linkLabel_instagram.TabIndex = 6;
-            this.linkLabel_instagram.TabStop = true;
-            this.linkLabel_instagram.Text = "mfarhan08a";
-            this.linkLabel_instagram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_instagram_LinkClicked);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(50, 137);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 25);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Created by";
             // 
-            // linkLabel_itunes
+            // label6
             // 
-            this.linkLabel_itunes.AutoSize = true;
-            this.linkLabel_itunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel_itunes.Location = new System.Drawing.Point(51, 284);
-            this.linkLabel_itunes.Name = "linkLabel_itunes";
-            this.linkLabel_itunes.Size = new System.Drawing.Size(141, 20);
-            this.linkLabel_itunes.TabIndex = 7;
-            this.linkLabel_itunes.TabStop = true;
-            this.linkLabel_itunes.Text = "iTunes Search API";
-            this.linkLabel_itunes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_itunes_LinkClicked);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(51, 166);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Muhammad Farhan Anshor";
             // 
-            // pictureBox1
+            // label5
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(314, 191);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 156);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(45, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 55);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "About";
             // 
             // Form1
             // 
@@ -643,19 +642,19 @@
             this.pnl_welcome.PerformLayout();
             this.pnl_play.ResumeLayout(false);
             this.pnl_play.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.prevSongInfo.ResumeLayout(false);
             this.prevSongInfo.PerformLayout();
             this.pnl_settings.ResumeLayout(false);
             this.pnl_settings.PerformLayout();
-            this.gb_genreSelection.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSongsView)).EndInit();
-            this.gb_totalQuestion.ResumeLayout(false);
-            this.gb_totalQuestion.PerformLayout();
             this.gb_countdownTimer.ResumeLayout(false);
             this.gb_countdownTimer.PerformLayout();
+            this.gb_totalQuestion.ResumeLayout(false);
+            this.gb_totalQuestion.PerformLayout();
+            this.gb_genreSelection.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSongsView)).EndInit();
             this.pnl_about.ResumeLayout(false);
             this.pnl_about.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

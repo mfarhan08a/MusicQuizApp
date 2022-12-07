@@ -33,9 +33,8 @@ namespace MusicQuizApp
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            //panel controls                      
-            panelControls(pnl_welcome);
+        {            
+            panelControls(pnl_loading);
 
             syncSongs(genres);
 
@@ -61,6 +60,7 @@ namespace MusicQuizApp
             pnl_play.Visible = false;
             pnl_settings.Visible = false;
             pnl_about.Visible = false;
+            pnl_loading.Visible = false;
 
             panel.Visible = true;
             panel.BringToFront();
@@ -197,10 +197,10 @@ namespace MusicQuizApp
 
         private void btn_welcome_Click(object sender, EventArgs e)
         {
-            // panel controls            
             panelControls(pnl_welcome);
 
             player.controls.stop();
+            countdown.Stop();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
@@ -218,6 +218,7 @@ namespace MusicQuizApp
 
             dataSongsView.Refresh();
             player.controls.stop();
+            countdown.Stop();
 
             Console.WriteLine(songs.Count());
             Console.WriteLine("[{0}]", string.Join(", ", genres));
@@ -242,12 +243,6 @@ namespace MusicQuizApp
                 btn_skip_Click(sender, e);
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void btn_applySettings_Click(object sender, EventArgs e)
         {
@@ -332,7 +327,11 @@ namespace MusicQuizApp
         private void btn_about_Click(object sender, EventArgs e)
         {
             panelControls(pnl_about);
-        }       
+
+            player.controls.stop();
+            countdown.Stop();
+
+        }
 
         private void linkLabel_instagram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -344,6 +343,17 @@ namespace MusicQuizApp
         {
             linkLabel_instagram.LinkVisited = true;
             System.Diagnostics.Process.Start("https://performance-partners.apple.com/search-api");
+        }
+
+        private void loading_Tick(object sender, EventArgs e)
+        {
+            loading.Start();
+            progressBar.Increment(2);
+            if (songs.Count > 1600 || progressBar.Value == 100)
+            {
+                loading.Stop();
+                panelControls(pnl_welcome);
+            }
         }
     }
 }

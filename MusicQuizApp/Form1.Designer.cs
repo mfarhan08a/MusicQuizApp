@@ -78,6 +78,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pnl_loading = new System.Windows.Forms.Panel();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.loading = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.pnl_welcome.SuspendLayout();
             this.pnl_play.SuspendLayout();
@@ -89,26 +97,31 @@
             this.gb_genreSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSongsView)).BeginInit();
             this.pnl_about.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnl_loading.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.btn_welcome);
             this.panel1.Controls.Add(this.btn_about);
             this.panel1.Controls.Add(this.btn_settings);
             this.panel1.Controls.Add(this.btn_play);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(178, 681);
             this.panel1.TabIndex = 0;
             // 
             // btn_welcome
             // 
-            this.btn_welcome.Location = new System.Drawing.Point(20, 161);
-            this.btn_welcome.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_welcome.Location = new System.Drawing.Point(16, 220);
+            this.btn_welcome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_welcome.Name = "btn_welcome";
             this.btn_welcome.Size = new System.Drawing.Size(146, 42);
             this.btn_welcome.TabIndex = 4;
@@ -118,8 +131,8 @@
             // 
             // btn_about
             // 
-            this.btn_about.Location = new System.Drawing.Point(20, 320);
-            this.btn_about.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_about.Location = new System.Drawing.Point(16, 379);
+            this.btn_about.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_about.Name = "btn_about";
             this.btn_about.Size = new System.Drawing.Size(146, 42);
             this.btn_about.TabIndex = 3;
@@ -129,8 +142,8 @@
             // 
             // btn_settings
             // 
-            this.btn_settings.Location = new System.Drawing.Point(20, 267);
-            this.btn_settings.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_settings.Location = new System.Drawing.Point(16, 326);
+            this.btn_settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.Size = new System.Drawing.Size(146, 42);
             this.btn_settings.TabIndex = 2;
@@ -141,8 +154,8 @@
             // btn_play
             // 
             this.btn_play.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_play.Location = new System.Drawing.Point(20, 214);
-            this.btn_play.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_play.Location = new System.Drawing.Point(16, 273);
+            this.btn_play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_play.Name = "btn_play";
             this.btn_play.Size = new System.Drawing.Size(146, 42);
             this.btn_play.TabIndex = 1;
@@ -152,18 +165,19 @@
             // 
             // pnl_welcome
             // 
+            this.pnl_welcome.Controls.Add(this.pictureBox4);
             this.pnl_welcome.Controls.Add(this.label2);
             this.pnl_welcome.Controls.Add(this.label1);
-            this.pnl_welcome.Location = new System.Drawing.Point(389, 113);
+            this.pnl_welcome.Location = new System.Drawing.Point(197, 113);
             this.pnl_welcome.Name = "pnl_welcome";
-            this.pnl_welcome.Size = new System.Drawing.Size(863, 556);
+            this.pnl_welcome.Size = new System.Drawing.Size(1055, 556);
             this.pnl_welcome.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(332, 293);
+            this.label2.Location = new System.Drawing.Point(397, 315);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(243, 25);
             this.label2.TabIndex = 1;
@@ -173,7 +187,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 223);
+            this.label1.Location = new System.Drawing.Point(237, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(563, 55);
             this.label1.TabIndex = 0;
@@ -192,15 +206,15 @@
             this.pnl_play.Controls.Add(this.guessBox);
             this.pnl_play.Controls.Add(this.label4);
             this.pnl_play.Controls.Add(this.label3);
-            this.pnl_play.Location = new System.Drawing.Point(363, 84);
+            this.pnl_play.Location = new System.Drawing.Point(183, 45);
             this.pnl_play.Name = "pnl_play";
-            this.pnl_play.Size = new System.Drawing.Size(873, 569);
+            this.pnl_play.Size = new System.Drawing.Size(1053, 608);
             this.pnl_play.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(314, 191);
+            this.pictureBox1.Location = new System.Drawing.Point(410, 185);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -212,9 +226,9 @@
             this.prevSongInfo.Controls.Add(this.lbl_year);
             this.prevSongInfo.Controls.Add(this.lbl_artist);
             this.prevSongInfo.Controls.Add(this.lbl_title);
-            this.prevSongInfo.Location = new System.Drawing.Point(632, 29);
+            this.prevSongInfo.Location = new System.Drawing.Point(14, 24);
             this.prevSongInfo.Name = "prevSongInfo";
-            this.prevSongInfo.Size = new System.Drawing.Size(200, 103);
+            this.prevSongInfo.Size = new System.Drawing.Size(302, 103);
             this.prevSongInfo.TabIndex = 17;
             this.prevSongInfo.TabStop = false;
             this.prevSongInfo.Text = "Previous Song";
@@ -250,7 +264,7 @@
             // 
             this.lbl_questionNumber.AutoSize = true;
             this.lbl_questionNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_questionNumber.Location = new System.Drawing.Point(116, 29);
+            this.lbl_questionNumber.Location = new System.Drawing.Point(949, 31);
             this.lbl_questionNumber.Name = "lbl_questionNumber";
             this.lbl_questionNumber.Size = new System.Drawing.Size(49, 20);
             this.lbl_questionNumber.TabIndex = 16;
@@ -260,7 +274,7 @@
             // 
             this.lbl_question.AutoSize = true;
             this.lbl_question.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_question.Location = new System.Drawing.Point(29, 29);
+            this.lbl_question.Location = new System.Drawing.Point(862, 31);
             this.lbl_question.Name = "lbl_question";
             this.lbl_question.Size = new System.Drawing.Size(81, 20);
             this.lbl_question.TabIndex = 15;
@@ -270,7 +284,7 @@
             // 
             this.lbl_guess.AutoSize = true;
             this.lbl_guess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_guess.Location = new System.Drawing.Point(128, 478);
+            this.lbl_guess.Location = new System.Drawing.Point(227, 472);
             this.lbl_guess.Name = "lbl_guess";
             this.lbl_guess.Size = new System.Drawing.Size(86, 16);
             this.lbl_guess.TabIndex = 12;
@@ -280,7 +294,7 @@
             // lbl_timer
             // 
             this.lbl_timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_timer.Location = new System.Drawing.Point(359, 66);
+            this.lbl_timer.Location = new System.Drawing.Point(455, 60);
             this.lbl_timer.Name = "lbl_timer";
             this.lbl_timer.Size = new System.Drawing.Size(153, 108);
             this.lbl_timer.TabIndex = 14;
@@ -289,7 +303,7 @@
             // 
             // btn_skip
             // 
-            this.btn_skip.Location = new System.Drawing.Point(730, 521);
+            this.btn_skip.Location = new System.Drawing.Point(746, 459);
             this.btn_skip.Name = "btn_skip";
             this.btn_skip.Size = new System.Drawing.Size(121, 29);
             this.btn_skip.TabIndex = 13;
@@ -302,7 +316,7 @@
             this.btn_answer.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btn_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_answer.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_answer.Location = new System.Drawing.Point(622, 400);
+            this.btn_answer.Location = new System.Drawing.Point(721, 394);
             this.btn_answer.Name = "btn_answer";
             this.btn_answer.Size = new System.Drawing.Size(146, 45);
             this.btn_answer.TabIndex = 11;
@@ -313,7 +327,7 @@
             // guessBox
             // 
             this.guessBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guessBox.Location = new System.Drawing.Point(120, 401);
+            this.guessBox.Location = new System.Drawing.Point(219, 395);
             this.guessBox.Name = "guessBox";
             this.guessBox.Size = new System.Drawing.Size(496, 44);
             this.guessBox.TabIndex = 10;
@@ -323,7 +337,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(346, 364);
+            this.label4.Location = new System.Drawing.Point(449, 358);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 25);
             this.label4.TabIndex = 9;
@@ -333,7 +347,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(380, 24);
+            this.label3.Location = new System.Drawing.Point(479, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 37);
             this.label3.TabIndex = 8;
@@ -505,7 +519,7 @@
             "Anime"});
             this.clb_genreSelection.Location = new System.Drawing.Point(6, 31);
             this.clb_genreSelection.Name = "clb_genreSelection";
-            this.clb_genreSelection.Size = new System.Drawing.Size(411, 193);
+            this.clb_genreSelection.Size = new System.Drawing.Size(411, 172);
             this.clb_genreSelection.TabIndex = 0;
             // 
             // lbl_settings
@@ -537,6 +551,7 @@
             // 
             // pnl_about
             // 
+            this.pnl_about.Controls.Add(this.pictureBox2);
             this.pnl_about.Controls.Add(this.linkLabel_itunes);
             this.pnl_about.Controls.Add(this.linkLabel_instagram);
             this.pnl_about.Controls.Add(this.label7);
@@ -623,17 +638,92 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "About";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(526, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(242, 253);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(16, 30);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(146, 167);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(423, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(189, 186);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pnl_loading
+            // 
+            this.pnl_loading.Controls.Add(this.label11);
+            this.pnl_loading.Controls.Add(this.label10);
+            this.pnl_loading.Controls.Add(this.progressBar);
+            this.pnl_loading.Location = new System.Drawing.Point(-2, -7);
+            this.pnl_loading.Name = "pnl_loading";
+            this.pnl_loading.Size = new System.Drawing.Size(1267, 693);
+            this.pnl_loading.TabIndex = 6;
+            // 
+            // progressBar
+            // 
+            this.progressBar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.progressBar.ForeColor = System.Drawing.Color.PaleGreen;
+            this.progressBar.Location = new System.Drawing.Point(295, 370);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(702, 23);
+            this.progressBar.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(503, 225);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(290, 55);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Please Wait";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(540, 297);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(216, 25);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Your app is loading...";
+            // 
+            // loading
+            // 
+            this.loading.Enabled = true;
+            this.loading.Tick += new System.EventHandler(this.loading_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.pnl_play);
             this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_welcome);
             this.Controls.Add(this.pnl_about);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.pnl_play);
+            this.Controls.Add(this.pnl_loading);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -655,6 +745,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSongsView)).EndInit();
             this.pnl_about.ResumeLayout(false);
             this.pnl_about.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnl_loading.ResumeLayout(false);
+            this.pnl_loading.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -709,6 +804,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel_itunes;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel pnl_loading;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Timer loading;
     }
 }
 

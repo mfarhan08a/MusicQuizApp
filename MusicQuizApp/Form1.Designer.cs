@@ -51,8 +51,6 @@
             this.lbl_guess = new System.Windows.Forms.Label();
             this.lbl_timer = new System.Windows.Forms.Label();
             this.btn_skip = new System.Windows.Forms.Button();
-            this.btn_answer = new System.Windows.Forms.Button();
-            this.guessBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_settings = new System.Windows.Forms.Panel();
@@ -240,8 +238,6 @@
             this.pnl_play.Controls.Add(this.lbl_guess);
             this.pnl_play.Controls.Add(this.lbl_timer);
             this.pnl_play.Controls.Add(this.btn_skip);
-            this.pnl_play.Controls.Add(this.btn_answer);
-            this.pnl_play.Controls.Add(this.guessBox);
             this.pnl_play.Controls.Add(this.label4);
             this.pnl_play.Controls.Add(this.label3);
             this.pnl_play.Location = new System.Drawing.Point(183, 45);
@@ -322,7 +318,7 @@
             // 
             this.lbl_guess.AutoSize = true;
             this.lbl_guess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_guess.Location = new System.Drawing.Point(227, 472);
+            this.lbl_guess.Location = new System.Drawing.Point(17, 137);
             this.lbl_guess.Name = "lbl_guess";
             this.lbl_guess.Size = new System.Drawing.Size(86, 16);
             this.lbl_guess.TabIndex = 12;
@@ -341,7 +337,7 @@
             // 
             // btn_skip
             // 
-            this.btn_skip.Location = new System.Drawing.Point(746, 459);
+            this.btn_skip.Location = new System.Drawing.Point(788, 560);
             this.btn_skip.Name = "btn_skip";
             this.btn_skip.Size = new System.Drawing.Size(121, 29);
             this.btn_skip.TabIndex = 13;
@@ -349,33 +345,11 @@
             this.btn_skip.UseVisualStyleBackColor = true;
             this.btn_skip.Click += new System.EventHandler(this.btn_skip_Click);
             // 
-            // btn_answer
-            // 
-            this.btn_answer.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_answer.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_answer.Location = new System.Drawing.Point(721, 394);
-            this.btn_answer.Name = "btn_answer";
-            this.btn_answer.Size = new System.Drawing.Size(146, 45);
-            this.btn_answer.TabIndex = 11;
-            this.btn_answer.Text = "Enter";
-            this.btn_answer.UseVisualStyleBackColor = false;
-            this.btn_answer.Click += new System.EventHandler(this.btn_answer_Click);
-            // 
-            // guessBox
-            // 
-            this.guessBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guessBox.Location = new System.Drawing.Point(219, 395);
-            this.guessBox.Name = "guessBox";
-            this.guessBox.Size = new System.Drawing.Size(496, 44);
-            this.guessBox.TabIndex = 10;
-            this.guessBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(449, 358);
+            this.label4.Location = new System.Drawing.Point(443, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 25);
             this.label4.TabIndex = 9;
@@ -789,9 +763,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(183, 507);
+            this.button1.Location = new System.Drawing.Point(170, 411);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(346, 23);
+            this.button1.Size = new System.Drawing.Size(363, 42);
             this.button1.TabIndex = 19;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -799,9 +773,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(183, 537);
+            this.button2.Location = new System.Drawing.Point(170, 459);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(346, 23);
+            this.button2.Size = new System.Drawing.Size(363, 42);
             this.button2.TabIndex = 20;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -809,9 +783,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(183, 565);
+            this.button3.Location = new System.Drawing.Point(170, 506);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(346, 23);
+            this.button3.Size = new System.Drawing.Size(363, 42);
             this.button3.TabIndex = 21;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -819,9 +793,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(536, 565);
+            this.button4.Location = new System.Drawing.Point(546, 506);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(346, 23);
+            this.button4.Size = new System.Drawing.Size(363, 42);
             this.button4.TabIndex = 24;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -829,9 +803,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(536, 537);
+            this.button5.Location = new System.Drawing.Point(546, 459);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(346, 23);
+            this.button5.Size = new System.Drawing.Size(363, 42);
             this.button5.TabIndex = 23;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
@@ -839,9 +813,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(536, 507);
+            this.button6.Location = new System.Drawing.Point(546, 411);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(346, 23);
+            this.button6.Size = new System.Drawing.Size(363, 42);
             this.button6.TabIndex = 22;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
@@ -902,8 +876,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnl_play;
-        private System.Windows.Forms.Button btn_answer;
-        private System.Windows.Forms.TextBox guessBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_guess;

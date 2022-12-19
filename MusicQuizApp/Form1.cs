@@ -42,8 +42,7 @@ namespace MusicQuizApp
             panelControls(pnl_loading);
 
             syncSongs(genres);
-
-            guessBox.KeyDown += new KeyEventHandler(tb_KeyDown);
+            
             dataSongsView.Hide();
         }
 
@@ -145,48 +144,8 @@ namespace MusicQuizApp
                 button.Tag = randomAnswer[inc];
                 inc++;
             }
-
-        }
-
-        public void checkAnswer()
-        {        
-            if (questionNumber == totalQuestion)
-            {
-                previousSongShow();
-                gameOver();
-            }
-            else
-            {                
-                var index = songs[randomTrack[questionNumber]].trackName.IndexOf('(');
-                Console.WriteLine(songs[randomTrack[questionNumber]].trackName);
-                var answer = songs[randomTrack[questionNumber]].trackName;
-                if (index >= 0)
-                {
-                    Console.WriteLine(songs[randomTrack[questionNumber]].trackName.Remove(index));
-                    answer = songs[randomTrack[questionNumber]].trackName.Remove(index);
-                }
-                if (guessBox.Text.Trim().ToLower() == answer.Trim().ToLower())
-                {
-                    score++;
-                    lbl_guess.Text = "Your Guess : Correct";
-                    questionNumber++;
-                    guessBox.Text = "";
-                    if (questionNumber == totalQuestion)
-                    {
-                        previousSongShow();
-                        gameOver();
-                    }
-                    else
-                    {
-                        play(questionNumber);                        
-                    }
-                }
-                else
-                {
-                    lbl_guess.Text = "Your Guess : Wrong";
-                }                
-            }
-        }
+            Console.WriteLine(songs[randomTrack[questionNumber]].trackName);
+        }        
 
         private void checkAnswerEvent(object sender, EventArgs e)
         {
@@ -199,22 +158,13 @@ namespace MusicQuizApp
                 gameOver();
             }
             else
-            {
-                var index = songs[randomTrack[questionNumber]].trackName.IndexOf('(');
-                Console.WriteLine(songs[randomTrack[questionNumber]].trackName);
-                var answer = songs[randomTrack[questionNumber]].trackName;
-                if (index >= 0)
-                {
-                    Console.WriteLine(songs[randomTrack[questionNumber]].trackName.Remove(index));
-                    answer = songs[randomTrack[questionNumber]].trackName.Remove(index);
-                }
+            {                
                 if (buttonTag == randomTrack[questionNumber])
                 {
                     score++;
                     lbl_guess.Text = "Your Guess : Correct";
-                    questionNumber++;
-                    guessBox.Text = "";
-                    if (questionNumber == totalQuestion)
+                    questionNumber++;                    
+                    if (questionNumber == totalQuestion - 1)
                     {
                         previousSongShow();
                         gameOver();
@@ -256,25 +206,20 @@ namespace MusicQuizApp
             pnl_welcome.Visible = true;
             pnl_welcome.BringToFront();
         }
-
-        private void btn_answer_Click(object sender, EventArgs e)
-        {
-            checkAnswer();
-        }
+        
         private void btn_skip_Click(object sender, EventArgs e)
         {
             questionNumber++;
-            Console.WriteLine(questionNumber);
-            guessBox.Text = "";
+            Console.WriteLine(questionNumber);            
             if (questionNumber == totalQuestion)
             {
-                checkAnswer();
+                previousSongShow();
+                gameOver();
             }
             else
             {
                 Console.WriteLine(randomTrack[questionNumber]);
-                play(questionNumber);
-                checkAnswer();
+                play(questionNumber);                
             }
         }
 
@@ -308,21 +253,13 @@ namespace MusicQuizApp
 
         }
 
-
-        private void tb_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                checkAnswer();
-            }
-        }
+        
         private void countdown_Tick(object sender, EventArgs e)
         {
             lbl_timer.Text = seconds--.ToString();
             if (seconds < 0)
             {
-                countdown.Stop();
-                checkAnswer();
+                countdown.Stop();                
                 btn_skip_Click(sender, e);
             }
         }

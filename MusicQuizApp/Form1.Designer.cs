@@ -31,11 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_welcome = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
             this.btn_settings = new System.Windows.Forms.Button();
             this.btn_play = new System.Windows.Forms.Button();
             this.pnl_welcome = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_play = new System.Windows.Forms.Panel();
@@ -54,6 +56,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_settings = new System.Windows.Forms.Panel();
+            this.gb_songsInfo = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.gb_countdownTimer = new System.Windows.Forms.GroupBox();
             this.rb_timer15 = new System.Windows.Forms.RadioButton();
             this.rb_timer25 = new System.Windows.Forms.RadioButton();
@@ -71,6 +78,7 @@
             this.dataSongsView = new System.Windows.Forms.DataGridView();
             this.countdown = new System.Windows.Forms.Timer(this.components);
             this.pnl_about = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.linkLabel_itunes = new System.Windows.Forms.LinkLabel();
             this.linkLabel_instagram = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
@@ -78,28 +86,32 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnl_loading = new System.Windows.Forms.Panel();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.loading = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_welcome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnl_play.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.prevSongInfo.SuspendLayout();
             this.pnl_settings.SuspendLayout();
+            this.gb_songsInfo.SuspendLayout();
             this.gb_countdownTimer.SuspendLayout();
             this.gb_totalQuestion.SuspendLayout();
             this.gb_genreSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSongsView)).BeginInit();
             this.pnl_about.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnl_loading.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,6 +129,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(178, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(16, 30);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(146, 167);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
             // 
             // btn_welcome
             // 
@@ -173,6 +195,16 @@
             this.pnl_welcome.Size = new System.Drawing.Size(1055, 556);
             this.pnl_welcome.TabIndex = 1;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(423, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(189, 186);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -195,6 +227,12 @@
             // 
             // pnl_play
             // 
+            this.pnl_play.Controls.Add(this.button4);
+            this.pnl_play.Controls.Add(this.button5);
+            this.pnl_play.Controls.Add(this.button6);
+            this.pnl_play.Controls.Add(this.button3);
+            this.pnl_play.Controls.Add(this.button2);
+            this.pnl_play.Controls.Add(this.button1);
             this.pnl_play.Controls.Add(this.pictureBox1);
             this.pnl_play.Controls.Add(this.prevSongInfo);
             this.pnl_play.Controls.Add(this.lbl_questionNumber);
@@ -355,6 +393,7 @@
             // 
             // pnl_settings
             // 
+            this.pnl_settings.Controls.Add(this.gb_songsInfo);
             this.pnl_settings.Controls.Add(this.gb_countdownTimer);
             this.pnl_settings.Controls.Add(this.gb_totalQuestion);
             this.pnl_settings.Controls.Add(this.btn_applySettings);
@@ -366,6 +405,62 @@
             this.pnl_settings.Size = new System.Drawing.Size(1039, 622);
             this.pnl_settings.TabIndex = 4;
             // 
+            // gb_songsInfo
+            // 
+            this.gb_songsInfo.Controls.Add(this.label15);
+            this.gb_songsInfo.Controls.Add(this.label14);
+            this.gb_songsInfo.Controls.Add(this.label13);
+            this.gb_songsInfo.Controls.Add(this.label12);
+            this.gb_songsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_songsInfo.Location = new System.Drawing.Point(486, 72);
+            this.gb_songsInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_songsInfo.Name = "gb_songsInfo";
+            this.gb_songsInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_songsInfo.Size = new System.Drawing.Size(521, 176);
+            this.gb_songsInfo.TabIndex = 6;
+            this.gb_songsInfo.TabStop = false;
+            this.gb_songsInfo.Text = "Songs and Quiz Informations";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(16, 136);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(141, 20);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Countdown Timer :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 103);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 20);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Total Question :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(16, 68);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 20);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Genre Selected :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(16, 32);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 20);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Total Songs :";
+            // 
             // gb_countdownTimer
             // 
             this.gb_countdownTimer.Controls.Add(this.rb_timer15);
@@ -374,7 +469,7 @@
             this.gb_countdownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_countdownTimer.Location = new System.Drawing.Point(14, 438);
             this.gb_countdownTimer.Name = "gb_countdownTimer";
-            this.gb_countdownTimer.Size = new System.Drawing.Size(423, 77);
+            this.gb_countdownTimer.Size = new System.Drawing.Size(448, 77);
             this.gb_countdownTimer.TabIndex = 5;
             this.gb_countdownTimer.TabStop = false;
             this.gb_countdownTimer.Text = "Countdown Timer";
@@ -422,7 +517,7 @@
             this.gb_totalQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_totalQuestion.Location = new System.Drawing.Point(14, 342);
             this.gb_totalQuestion.Name = "gb_totalQuestion";
-            this.gb_totalQuestion.Size = new System.Drawing.Size(423, 77);
+            this.gb_totalQuestion.Size = new System.Drawing.Size(448, 77);
             this.gb_totalQuestion.TabIndex = 3;
             this.gb_totalQuestion.TabStop = false;
             this.gb_totalQuestion.Text = "Total Question";
@@ -498,7 +593,7 @@
             this.gb_genreSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_genreSelection.Location = new System.Drawing.Point(14, 72);
             this.gb_genreSelection.Name = "gb_genreSelection";
-            this.gb_genreSelection.Size = new System.Drawing.Size(423, 249);
+            this.gb_genreSelection.Size = new System.Drawing.Size(448, 249);
             this.gb_genreSelection.TabIndex = 2;
             this.gb_genreSelection.TabStop = false;
             this.gb_genreSelection.Text = "Genre Selection";
@@ -519,7 +614,7 @@
             "Anime"});
             this.clb_genreSelection.Location = new System.Drawing.Point(6, 31);
             this.clb_genreSelection.Name = "clb_genreSelection";
-            this.clb_genreSelection.Size = new System.Drawing.Size(411, 172);
+            this.clb_genreSelection.Size = new System.Drawing.Size(437, 193);
             this.clb_genreSelection.TabIndex = 0;
             // 
             // lbl_settings
@@ -537,11 +632,11 @@
             this.dataSongsView.AllowUserToAddRows = false;
             this.dataSongsView.AllowUserToDeleteRows = false;
             this.dataSongsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSongsView.Location = new System.Drawing.Point(455, 4);
+            this.dataSongsView.Location = new System.Drawing.Point(486, 264);
             this.dataSongsView.Name = "dataSongsView";
             this.dataSongsView.ReadOnly = true;
             this.dataSongsView.RowHeadersWidth = 51;
-            this.dataSongsView.Size = new System.Drawing.Size(581, 562);
+            this.dataSongsView.Size = new System.Drawing.Size(521, 43);
             this.dataSongsView.TabIndex = 0;
             // 
             // countdown
@@ -563,6 +658,16 @@
             this.pnl_about.Name = "pnl_about";
             this.pnl_about.Size = new System.Drawing.Size(960, 1011);
             this.pnl_about.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(526, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(242, 253);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // linkLabel_itunes
             // 
@@ -638,36 +743,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "About";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(526, 59);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(242, 253);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(16, 30);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(146, 167);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(423, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(189, 186);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
             // pnl_loading
             // 
             this.pnl_loading.Controls.Add(this.label11);
@@ -677,25 +752,6 @@
             this.pnl_loading.Name = "pnl_loading";
             this.pnl_loading.Size = new System.Drawing.Size(1267, 693);
             this.pnl_loading.TabIndex = 6;
-            // 
-            // progressBar
-            // 
-            this.progressBar.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.progressBar.ForeColor = System.Drawing.Color.PaleGreen;
-            this.progressBar.Location = new System.Drawing.Point(295, 370);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(702, 23);
-            this.progressBar.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(503, 225);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(290, 55);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Please Wait";
             // 
             // label11
             // 
@@ -707,29 +763,110 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Your app is loading...";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(503, 225);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(290, 55);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Please Wait";
+            // 
+            // progressBar
+            // 
+            this.progressBar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.progressBar.ForeColor = System.Drawing.Color.PaleGreen;
+            this.progressBar.Location = new System.Drawing.Point(295, 370);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(702, 23);
+            this.progressBar.TabIndex = 0;
+            // 
             // loading
             // 
             this.loading.Enabled = true;
             this.loading.Tick += new System.EventHandler(this.loading_Tick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(183, 507);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(346, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.checkAnswerEvent);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(183, 537);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(346, 23);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.checkAnswerEvent);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(183, 565);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(346, 23);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.checkAnswerEvent);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(536, 565);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(346, 23);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.checkAnswerEvent);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(536, 537);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(346, 23);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.checkAnswerEvent);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(536, 507);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(346, 23);
+            this.button6.TabIndex = 22;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.checkAnswerEvent);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pnl_play);
             this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_welcome);
             this.Controls.Add(this.pnl_about);
-            this.Controls.Add(this.pnl_play);
             this.Controls.Add(this.pnl_loading);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Music Quiz App";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_welcome.ResumeLayout(false);
             this.pnl_welcome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnl_play.ResumeLayout(false);
             this.pnl_play.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -737,6 +874,8 @@
             this.prevSongInfo.PerformLayout();
             this.pnl_settings.ResumeLayout(false);
             this.pnl_settings.PerformLayout();
+            this.gb_songsInfo.ResumeLayout(false);
+            this.gb_songsInfo.PerformLayout();
             this.gb_countdownTimer.ResumeLayout(false);
             this.gb_countdownTimer.PerformLayout();
             this.gb_totalQuestion.ResumeLayout(false);
@@ -746,8 +885,6 @@
             this.pnl_about.ResumeLayout(false);
             this.pnl_about.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnl_loading.ResumeLayout(false);
             this.pnl_loading.PerformLayout();
             this.ResumeLayout(false);
@@ -812,6 +949,17 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Timer loading;
+        private System.Windows.Forms.GroupBox gb_songsInfo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }
 

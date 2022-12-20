@@ -21,6 +21,9 @@ namespace MusicQuizApp
         public static int totalScore;
 
         WindowsMediaPlayer player = new WindowsMediaPlayer();
+        WindowsMediaPlayer guessSound = new WindowsMediaPlayer();
+        string wrongSoundPath = @"D:\Kuliah\#SEMESTER 5\Pemrograman Platform Desktop dan Embedded\MusicQuizApp\assets\wrong.mp3";
+        string correctSoundPath = @"D:\Kuliah\#SEMESTER 5\Pemrograman Platform Desktop dan Embedded\MusicQuizApp\assets\correct.mp3";
         List<int> randomTrack = new List<int>();
         List<int> randomAnswer = new List<int>();
         List<SearchResult.Result> songs = new List<SearchResult.Result>();
@@ -166,6 +169,8 @@ namespace MusicQuizApp
                 score++;
                 lbl_guess.ForeColor = Color.Green;
                 lbl_guess.Text = "Your Guess : Correct";
+                guessSound.URL = correctSoundPath;
+                guessSound.controls.play();
                 questionNumber++;
                 if (questionNumber == totalQuestion)
                 {
@@ -181,6 +186,8 @@ namespace MusicQuizApp
             {
                 lbl_guess.ForeColor= Color.Red;
                 lbl_guess.Text = "Your Guess : Wrong";
+                guessSound.URL = wrongSoundPath;
+                guessSound.controls.play();
                 questionNumber++;
                 if (questionNumber == totalQuestion)
                 {

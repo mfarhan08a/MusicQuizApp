@@ -88,7 +88,7 @@ namespace MusicQuizApp
             panelControls(pnl_play);
             loadingSettings.Stop();
 
-            btn_skip.Visible = true;
+            btn_skip.Visible = false;
             lbl_title.Text = "Title : ";
             lbl_artist.Text = "Artist : ";
             lbl_year.Text = "Year : ";
@@ -103,12 +103,11 @@ namespace MusicQuizApp
 
             try
             {
-                for (int i = 0; i < totalQuestion + 20; i++)
+                for (int i = 0; i < totalQuestion + 1; i++)
                 {
                     NewNumber(randomTrack);
                 }
-
-                play(questionNumber);
+                play(questionNumber);                
             }
             catch (Exception ex)
             {
@@ -122,6 +121,10 @@ namespace MusicQuizApp
             if (!list.Contains(MyNumber))
             {
                 list.Add(MyNumber);
+            }
+            else
+            {
+                NewNumber(list);
             }
         }
 
@@ -184,7 +187,7 @@ namespace MusicQuizApp
             }
             else
             {
-                lbl_guess.ForeColor= Color.Red;
+                lbl_guess.ForeColor = Color.Red;
                 lbl_guess.Text = "Your Guess : Wrong";
                 guessSound.URL = wrongSoundPath;
                 guessSound.controls.play();
@@ -197,7 +200,7 @@ namespace MusicQuizApp
                 else
                 {
                     play(questionNumber);
-                }                                
+                }
             }
         }
 
@@ -223,7 +226,7 @@ namespace MusicQuizApp
             goForm.ShowDialog();
 
             player.controls.stop();
-            panelControls(pnl_welcome);           
+            panelControls(pnl_welcome);
         }
 
         private void btn_skip_Click(object sender, EventArgs e)

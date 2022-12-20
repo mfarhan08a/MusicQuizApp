@@ -121,7 +121,7 @@
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHMuSURBVHhe7Z0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHMuSURBVHhe7Z0J
         fFTV2f9Dgta9ra12tb6tXbS29t+SSVhENmUVcUOtKyJMBtS2tr5trZl0atW3VqtkIkqAhCQsahSYOwNU
         u4iSHUIyM4ha27d2sa1b3YDJhCX3f0540jfcPEnmznrPvb/v5/P9iJA8c59zZ+5v7sy95+QBAAAAAAAA
         AAAAAAAAAAAAAIAFcLeHPu4Oh84tiQRvKolovyyJaqtLIoHfiT+/IP78T/Hfd4T7hLqwi/7/b+5I8MWS
@@ -619,7 +619,7 @@
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHMuSURBVHhe7Z0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHMuSURBVHhe7Z0J
         fFTV2f9Dgta9ra12tb6tXbS29t+SSVhENmUVcUOtKyJMBtS2tr5trZl0atW3VqtkIkqAhCQsahSYOwNU
         u4iSHUIyM4ha27d2sa1b3YDJhCX3f0540jfcPEnmznrPvb/v5/P9iJA8c59zZ+5v7sy95+QBAAAAAAAA
         AAAAAAAAAAAAAIAFcLeHPu4Oh84tiQRvKolovyyJaqtLIoHfiT+/IP78T/Hfd4T7hLqwi/7/b+5I8MWS
@@ -4219,7 +4219,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHMuSURBVHhe7Z0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHMuSURBVHhe7Z0J
         fFTV2f9Dgta9ra12tb6tXbS29t+SSVhENmUVcUOtKyJMBtS2tr5trZl0atW3VqtkIkqAhCQsahSYOwNU
         u4iSHUIyM4ha27d2sa1b3YDJhCX3f0540jfcPEnmznrPvb/v5/P9iJA8c59zZ+5v7sy95+QBAAAAAAAA
         AAAAAAAAAAAAAIAFcLeHPu4Oh84tiQRvKolovyyJaqtLIoHfiT+/IP78T/Hfd4T7hLqwi/7/b+5I8MWS
@@ -4716,5 +4716,8 @@
   </data>
   <metadata name="loading.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>130, 17</value>
+  </metadata>
+  <metadata name="loadingSettings.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>238, 17</value>
   </metadata>
 </root>

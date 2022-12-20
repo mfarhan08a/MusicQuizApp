@@ -17,11 +17,14 @@ namespace MusicQuizApp
 {
     public partial class Form1 : Form
     {
+        public static Form1 instance;
+        public static int totalScore;
+
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         List<int> randomTrack = new List<int>();
         List<int> randomAnswer = new List<int>();
         List<SearchResult.Result> songs = new List<SearchResult.Result>();
-        List<string> genres = new List<string> { "pop", "country", "rock", "dance", "j-pop", "k-pop", "indo-pop", "soundtrack", "anime" };       
+        List<string> genres = new List<string> { "pop", "country", "rock", "dance", "j-pop", "k-pop", "indo-pop", "soundtrack", "anime" };
         int questionNumber = 0;
         int score = 0;
         int totalQuestion = 10;
@@ -29,20 +32,24 @@ namespace MusicQuizApp
         int seconds;
         int time = 45;
 
+        GameOverForm goForm = new GameOverForm();
+
         Random rnd = new Random();
         int MyNumber = 0;
 
         public Form1()
         {
             InitializeComponent();
+            instance = this;
+            totalScore = score;
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
             panelControls(pnl_loading);
 
             syncSongs(genres);
-            
+
             dataSongsView.Hide();
         }
 
@@ -76,18 +83,20 @@ namespace MusicQuizApp
         {
             // panel controls           
             panelControls(pnl_play);
+            loadingSettings.Stop();
 
             btn_skip.Visible = true;
             lbl_title.Text = "Title : ";
             lbl_artist.Text = "Artist : ";
             lbl_year.Text = "Year : ";
+            lbl_guess.ForeColor = Color.Black;
+            lbl_guess.Text = "Your Guess : ";
 
             score = 0;
             questionNumber = 0;
-
             randomTrack.Clear();
-            
-            MyNumber = 0;            
+            MyNumber = 0;
+            countdown.Stop();
 
             try
             {
@@ -108,10 +117,10 @@ namespace MusicQuizApp
         {
             MyNumber = rnd.Next(0, songs.Count - 1);
             if (!list.Contains(MyNumber))
-            {                
+            {
                 list.Add(MyNumber);
             }
-        }        
+        }
 
         public void play(int questionNumber)
         {
@@ -131,8 +140,8 @@ namespace MusicQuizApp
             for (int i = 0; i < totalQuestion + 20; i++)
             {
                 NewNumber(randomAnswer);
-            }            
-            randomAnswer.RemoveRange(6, randomAnswer.Count - 6);            
+            }
+            randomAnswer.RemoveRange(6, randomAnswer.Count - 6);
             randomAnswer = randomAnswer.OrderBy(a => rnd.Next()).ToList();
             Console.WriteLine("[{0}]", string.Join(", ", randomAnswer));
 
@@ -145,46 +154,48 @@ namespace MusicQuizApp
                 inc++;
             }
             Console.WriteLine(songs[randomTrack[questionNumber]].trackName);
-        }        
+        }
 
         private void checkAnswerEvent(object sender, EventArgs e)
         {
             var senderObject = (Button)sender;
             int buttonTag = Convert.ToInt32(senderObject.Tag);
 
-            if (questionNumber == totalQuestion)
+            if (buttonTag == randomTrack[questionNumber])
             {
-                previousSongShow();
-                gameOver();
-            }
-            else
-            {                
-                if (buttonTag == randomTrack[questionNumber])
+                score++;
+                lbl_guess.ForeColor = Color.Green;
+                lbl_guess.Text = "Your Guess : Correct";
+                questionNumber++;
+                if (questionNumber == totalQuestion)
                 {
-                    score++;
-                    lbl_guess.Text = "Your Guess : Correct";
-                    questionNumber++;                    
-                    if (questionNumber == totalQuestion - 1)
-                    {
-                        previousSongShow();
-                        gameOver();
-                    }
-                    else
-                    {
-                        play(questionNumber);
-                    }
+                    previousSongShow();
+                    gameOver();
                 }
                 else
                 {
-                    lbl_guess.Text = "Your Guess : Wrong";
-                    questionNumber++;
                     play(questionNumber);
                 }
+            }
+            else
+            {
+                lbl_guess.ForeColor= Color.Red;
+                lbl_guess.Text = "Your Guess : Wrong";
+                questionNumber++;
+                if (questionNumber == totalQuestion)
+                {
+                    previousSongShow();
+                    gameOver();
+                }
+                else
+                {
+                    play(questionNumber);
+                }                                
             }
         }
 
         public void previousSongShow()
-        {            
+        {
             lbl_title.Text = "Title : " + songs[randomTrack[questionNumber - 1]].trackName.ToString();
             lbl_artist.Text = "Artist : " + songs[randomTrack[questionNumber - 1]].artistName.ToString();
             lbl_year.Text = "Year : " + songs[randomTrack[questionNumber - 1]].releaseDate.Year.ToString();
@@ -193,24 +204,25 @@ namespace MusicQuizApp
         public void gameOver()
         {
             countdown.Stop();
-            MessageBox.Show(
-                "Quiz Ended!" + Environment.NewLine +
-                "You have guessed " + score + " songs correctly." + Environment.NewLine +
-                "Click OK to Continue"
-                );
+            double percentage = (Convert.ToDouble(score) / totalQuestion) * 100;
+            Console.WriteLine(percentage);
+            GameOverForm.instance.lbl_totalScr.Text = "You have guess " + score + " of " + totalQuestion + " songs Correctly!";
+            GameOverForm.instance.lbl_percent.Text = "You have pass " + percentage + "% accuration on the quiz.";
+
             score = 0;
             questionNumber = 0;
             randomTrack.Clear();
+
+            goForm.ShowDialog();
+
             player.controls.stop();
-            pnl_play.Visible = false;
-            pnl_welcome.Visible = true;
-            pnl_welcome.BringToFront();
+            panelControls(pnl_welcome);           
         }
-        
+
         private void btn_skip_Click(object sender, EventArgs e)
         {
             questionNumber++;
-            Console.WriteLine(questionNumber);            
+            Console.WriteLine(questionNumber);
             if (questionNumber == totalQuestion)
             {
                 previousSongShow();
@@ -219,16 +231,17 @@ namespace MusicQuizApp
             else
             {
                 Console.WriteLine(randomTrack[questionNumber]);
-                play(questionNumber);                
+                play(questionNumber);
             }
         }
 
-        private void btn_welcome_Click(object sender, EventArgs e)
+        public void btn_welcome_Click(object sender, EventArgs e)
         {
             panelControls(pnl_welcome);
 
             player.controls.stop();
             countdown.Stop();
+            loadingSettings.Stop();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
@@ -251,15 +264,21 @@ namespace MusicQuizApp
             Console.WriteLine(songs.Count());
             Console.WriteLine("[{0}]", string.Join(", ", genres));
 
+            //songs and quiz info
+            lbl_totalQuestions.Text = "Total Questions : " + totalQuestion.ToString();
+            lbl_totalSongs.Text = "Total Songs : " + songs.Count().ToString();
+            lbl_genreSelected.Text = "Genre Selected : " + string.Join(", ", genres).ToString();
+            lbl_countDownTimer.Text = "Countdown Timer : " + time.ToString();
+            loadingSettings.Stop();
         }
 
-        
+
         private void countdown_Tick(object sender, EventArgs e)
         {
             lbl_timer.Text = seconds--.ToString();
             if (seconds < 0)
             {
-                countdown.Stop();                
+                countdown.Stop();
                 btn_skip_Click(sender, e);
             }
         }
@@ -342,6 +361,15 @@ namespace MusicQuizApp
             {
                 time = 15;
             }
+
+            //songs and quiz info
+            lbl_totalQuestions.Text = "Total Questions : " + totalQuestion.ToString();
+            lbl_totalSongs.Text = "Total Songs : " + songs.Count().ToString();
+            lbl_genreSelected.Text = "Genre Selected : " + string.Join(", ", genres).ToString();
+            lbl_countDownTimer.Text = "Countdown Timer : " + time.ToString();
+
+            //loading settings            
+            loadingSettings.Start();
         }
 
         private void btn_about_Click(object sender, EventArgs e)
@@ -350,6 +378,7 @@ namespace MusicQuizApp
 
             player.controls.stop();
             countdown.Stop();
+            loadingSettings.Stop();
 
         }
 
@@ -375,6 +404,18 @@ namespace MusicQuizApp
                 panelControls(pnl_welcome);
             }
         }
-        
+
+        private void loadingSettings_Tick(object sender, EventArgs e)
+        {
+            progressBar.Increment(2);
+            if (songs.Count > 0)
+            {
+                //songs and quiz info
+                lbl_totalQuestions.Text = "Total Questions : " + totalQuestion.ToString();
+                lbl_totalSongs.Text = "Total Songs : " + songs.Count().ToString();
+                lbl_genreSelected.Text = "Genre Selected : " + string.Join(", ", genres).ToString();
+                lbl_countDownTimer.Text = "Countdown Timer : " + time.ToString();
+            }
+        }
     }
 }

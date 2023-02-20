@@ -408,7 +408,8 @@ namespace MusicQuizApp
         {
             loading.Start();
             progressBar.Increment(1);
-            if (songs.Count > 1600)
+                Console.WriteLine(songs.Count().ToString());
+            if (songs.Count > 1200)
             {
                 loading.Stop();
                 panelControls(pnl_welcome);

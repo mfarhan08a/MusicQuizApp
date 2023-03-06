@@ -419,7 +419,7 @@ namespace MusicQuizApp
         private void loadingSettings_Tick(object sender, EventArgs e)
         {
             progressBar.Increment(2);
-            if (songs.Count > 0)
+            if (progressBar.Value > 120)
             {
                 //songs and quiz info
                 lbl_totalQuestions.Text = "Total Questions : " + totalQuestion.ToString();
